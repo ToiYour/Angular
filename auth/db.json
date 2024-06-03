@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "username": "Nguyễn Huy Tới",
+      "email": "toidz@gmail.com",
+      "password": "25102004",
+      "id": 1
+    },
+    {
+      "username": "Nguyen Van B",
+      "email": "vanb@gmail.com",
+      "password": "147258369",
+      "id": 3
+    },
+    {
+      "username": "Nguyen Van C",
+      "email": "vanc@gmail.com",
+      "password": "147258369",
+      "id": 4
+    }
+  ]
+}

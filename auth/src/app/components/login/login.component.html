@@ -1,0 +1,31 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+  <h2>Đăng nhập</h2>
+
+  <div class="mb-3">
+    <label for="" class="form-label">Email</label>
+    <input type="text" class="form-control" formControlName="email" />
+    <p class="text-danger" *ngIf="loginForm.get('email')?.errors?.['required']">
+      Vui lòng nhập Email
+    </p>
+    <p class="text-danger" *ngIf="loginForm.get('email')?.errors?.['email']">
+      Email không đúng định dạng
+    </p>
+  </div>
+  <div class="mb-3">
+    <label for="" class="form-label">Password</label>
+    <input type="text" class="form-control" formControlName="password" />
+    <p
+      class="text-danger"
+      *ngIf="loginForm.get('password')?.hasError('required')"
+    >
+      Vui lòng nhập password
+    </p>
+    <p
+      class="text-danger"
+      *ngIf="loginForm.get('password')?.hasError('minlength')"
+    >
+      Password ít nhất là 6 ký tự
+    </p>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
