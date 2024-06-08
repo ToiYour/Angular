@@ -1,0 +1,64 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="formRegister">
+  <div class="mb-3">
+    <label for="" class="form-label">Email</label>
+    <input type="email" class="form-control" id="" formControlName="email" />
+    <p
+      *ngIf="formRegister.get('email')?.hasError('required')"
+      class="text-danger"
+    >
+      Email là bắt buộc
+    </p>
+    <p *ngIf="formRegister.get('email')?.hasError('email')" class="text-danger">
+      Email không đúng định dạng
+    </p>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input
+      type="password"
+      class="form-control"
+      id="exampleInputPassword1"
+      formControlName="password"
+    />
+    <p
+      *ngIf="formRegister.get('password')?.hasError('required')"
+      class="text-danger"
+    >
+      Password là bắt buộc
+    </p>
+    <p
+      *ngIf="formRegister.get('password')?.hasError('minlength')"
+      class="text-danger"
+    >
+      Password ít nhất 6 ký tự
+    </p>
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputPassword2" class="form-label"
+      >Confirm Password</label
+    >
+    <input
+      type="password"
+      class="form-control"
+      id="exampleInputPassword2"
+      formControlName="confirmPassword"
+    />
+    <p
+      *ngIf="formRegister.get('confirmPassword')?.hasError('required')"
+      class="text-danger"
+    >
+      Confirm password là bắt buộc
+    </p>
+    <p
+      *ngIf="formRegister.get('confirmPassword')?.hasError('minlength')"
+      class="text-danger"
+    >
+      Confirm password ít nhất 6 ký tự
+    </p>
+    <p *ngIf="formRegister.errors?.['passwordiscompare']" class="text-danger">
+      Confirm password không khớp
+    </p>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

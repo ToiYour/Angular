@@ -1,0 +1,47 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="formProduct">
+  <div class="mb-3">
+    <label for="" class="form-label">Tên</label>
+    <input type="text" class="form-control" formControlName="name" />
+    <p
+      *ngIf="formProduct.get('name')?.hasError('required')"
+      class="text-danger"
+    >
+      Tên là bắt buộc
+    </p>
+    <p
+      *ngIf="formProduct.get('name')?.hasError('minlength')"
+      class="text-danger"
+    >
+      Tên ít nhất là 3 ký tự
+    </p>
+  </div>
+  <div class="mb-3">
+    <label for="" class="form-label">Ảnh</label>
+    <input type="text" class="form-control" formControlName="image" />
+    <p
+      *ngIf="formProduct.get('image')?.hasError('required')"
+      class="text-danger"
+    >
+      Ảnh là bắt buộc
+    </p>
+  </div>
+  <div class="mb-3">
+    <label for="" class="form-label">Giá</label>
+    <input type="number" class="form-control" formControlName="price" />
+    <p
+      *ngIf="formProduct.get('price')?.hasError('required')"
+      class="text-danger"
+    >
+      Giá là bắt buộc
+    </p>
+  </div>
+  <div class="mb-3">
+    <label for="" class="form-label">Số lượng</label>
+    <input type="number" class="form-control" formControlName="quality" />
+  </div>
+  <div class="mb-3">
+    <label for="" class="form-label">Mô tả</label>
+    <textarea class="form-control" formControlName="description"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

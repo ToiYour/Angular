@@ -1,0 +1,30 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="formAdd">
+  <div class="mb-3">
+    <label for="" class="form-label">Tên</label>
+    <input type="email" class="form-control" id="" formControlName="name" />
+    <p *ngIf="formAdd.get('name')?.hasError('required')" class="text-danger">
+      Tên là bắt buộc
+    </p>
+  </div>
+  <div class="mb-3">
+    <label for="" class="form-label">Mô tả</label>
+    <textarea
+      name=""
+      id=""
+      class="form-control"
+      formControlName="desc"
+    ></textarea>
+    <p *ngIf="formAdd.get('desc')?.hasError('required')" class="text-danger">
+      Mô tả là bắt buộc
+    </p>
+  </div>
+  <div class="mb-3">
+    <label for="" class="form-label">Giá</label>
+    <input type="number" class="form-control" id="" formControlName="price" />
+    <p *ngIf="formAdd.get('price')?.hasError('required')" class="text-danger">
+      Giá là bắt buộc
+    </p>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

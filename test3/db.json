@@ -1,0 +1,41 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "products": [
+    {
+      "id": 1,
+      "name": "Sản phẩm 1 tái bản",
+      "desc": "Mô tả sản phẩm 1",
+      "price": 24584
+    },
+    {
+      "name": "Sản phẩm 2",
+      "desc": "Angular is running in development mode.",
+      "price": 45856156,
+      "id": 2
+    }
+  ],
+  "users": [
+    {
+      "email": "toidz25102004@gmail.com",
+      "password": "$2a$10$i9NQ07gQ.vsNQGiCLHN7DOOMpPqLFGLELPxueMx29BJ32RZAtL9Be",
+      "confirmPassword": "25102004",
+      "id": 1
+    }
+  ]
+}

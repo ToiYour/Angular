@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "email": "toi@gmail.com",
+      "password": "$2a$10$PlTANvfdA68ISwIal8gu5O9CAFEdi0dpYc6bwtVMU7EXAVo4EIrfm",
+      "id": 1
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Sản phẩm 2 tía bản12",
+      "image": "Ảnh sản phẩm 1",
+      "price": 156451,
+      "quality": 1125,
+      "description": "Mô tả sản phẩm 1"
+    }
+  ]
+}
